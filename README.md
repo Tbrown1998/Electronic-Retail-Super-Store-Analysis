@@ -1,6 +1,6 @@
 # 📊 Electronics Retail Superstore Power BI Dashboard
 
-![032811bestbuy](https://github.com/user-attachments/assets/5877fd2d-37fd-4d62-9b97-804706324685)
+![Screenshot (40)](https://github.com/user-attachments/assets/40fdfbd9-7aec-477e-a963-1ebd52e6bd40)
 
 
 ## 📌 Project Overview
@@ -30,7 +30,7 @@ This project aims to analyze and optimize the retail sales performance of an ele
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 The primary goals of this project include:
 - **Identifying top revenue-generating products** across all sales channels.
 - **Analyzing store-wise and country-wise sales performance** to determine profitable locations.
@@ -81,7 +81,7 @@ Data cleaning is a crucial step before analysis, ensuring accuracy, consistency,
 - Select the column → Click **Remove Duplicates** in the ribbon.  
 - Verify the row count before and after removal.
 ![Screenshot (48)](https://github.com/user-attachments/assets/ac7e92c7-cdeb-4eb1-b05f-983d52d6aa89)
-                                            **Image Showing Duplicate Removal Process**
+- *Image Showing Duplicate Removal Process*
 
 #### **Step 2: Standardizing Data Formats**  
 - Ensure numerical fields (e.g., `Sales`, `Quantity`) are in **Decimal Number** format.  
@@ -94,7 +94,7 @@ Data cleaning is a crucial step before analysis, ensuring accuracy, consistency,
     Text.Proper([Product Name])
     ```
   ![Screenshot (50)](https://github.com/user-attachments/assets/5551047f-e697-483d-9044-d9510c545d3a)
-                                            **Image Showing Format Standardizing Process**
+  - *Image Showing Format Standardizing Process*
 #### **Step 3: Handling Missing Values**  
 ##### **A. Identifying Missing Data**  
 - Click on each column and check for **null** values in the data preview.  
@@ -115,7 +115,7 @@ RETURN CALENDAR(StartDate, EndDate)
 ```
 - Extract neccessary columns from `Date` column
 ![Screenshot (52)](https://github.com/user-attachments/assets/26330727-0417-4a67-85ed-024446e11b65)
-                                            **Image Showing Completed Date Table**
+- *Image Showing Completed Date Table*
 
 ### Step 2: Defining Relationships
 #### **Primary & Foreign Keys**
@@ -125,28 +125,33 @@ To establish relationships:
 - **Sales Table** → Linked to `Customers Table` using `CustomerKey`.
 - **Sales Table** → Linked to `Date Table` using `Order Date` as primary relationship and `Delivery Date` as secondary relationship.
 ![Screenshot (53)](https://github.com/user-attachments/assets/d28ec2c1-178b-4522-bbb5-f4d1930376da)
-                                            **Image Showing Completed Data Model**
+- *Image Showing Completed Data Model*
  
 ---
 
 ## 🧮 Key DAX Measures
 - 1. Total Revenue
 ```DAX
-Total Revenue = SUM(Sales[Revenue])
+Total Revenue = 
+  SUM(Sales[Revenue])
 ```
 - 2. Revenue Percentage Share
-```DAX 
-DIVIDE([Revenue], CALCULATE([Revenue], ALL(stores[Country])), 0)
+```DAX
+Revenue Percentage Share =
+    DIVIDE([Revenue], CALCULATE([Revenue], ALL(stores[Country])), 0)
 ```
-![Screenshot (54)](https://github.com/user-attachments/assets/e63d1398-b885-4026-81c6-58369454cae3)
-##### Analysis: `USA` is the **top-performing country** in terms of revenue with `43%` of Total Revenue.  `Online sales` contributed 20% of the total revenue, showing consistent growth.
+![Screenshot (54)](https://github.com/user-attachments/assets/8d23e4d0-a323-452c-b7e6-1a51b2c316e6)
+
+***Analysis:** `USA` is the **top-performing country** in terms of revenue with `43%` of Total Revenue.  `Online sales` contributed 20% of the total revenue, showing consistent growth.*
 
 - 3. Orders Count
-```DAX 
-SUM(Sales[Quantity])
+```DAX
+Orders = 
+    SUM(Sales[Quantity])
 ```
-![Screenshot (58)](https://github.com/user-attachments/assets/9186ed80-04df-4a09-8b57-bb8602f721c1)
-##### Analysis: Heatmap Visual shows Sales always decrease by about 35% around March - April and Gradually pickups around May**, showing shopping trends, and Peaks by December - February.
+![Screenshot (58)](https://github.com/user-attachments/assets/71ee9dfe-7614-4973-bd23-387b9f432fcf)
+
+***Analysis:** Heatmap Visual shows Sales always decrease by about 35% around March - April and Gradually pickups around May**, showing shopping trends, and Peaks by December - February.*
 
 - 4. Top product Sales In Each Country
 ```DAX 
@@ -166,13 +171,15 @@ VAR TopCountry =
 RETURN  
     CONCATENATEX(TopCountry, 'stores'[Country], ", ")
 ```
-- 5. Revenue Growth %
+- 5. Revenue Growth % per Year
 ```DAX
-Gross Profit Margin % = 
-DIVIDE([Gross Profit], [Revenue], 0)
+Revenue Growth % = 
+    Gross Profit Margin % = 
+    DIVIDE([Gross Profit], [Revenue], 0)
 ```
-![Screenshot (55)](https://github.com/user-attachments/assets/6cdf2134-2aa4-4d07-925c-4646270572c8)
-##### Analysis: `2019` had the best revenue growth and there's been a continious decline in sales and revenue generated.
+![Screenshot (55)](https://github.com/user-attachments/assets/817a821f-7b48-412e-989f-95d9a7e00d69)
+
+***Analysis:** `2019` had the best revenue growth and there's been a continious decline in sales and revenue generated.*
 
 - 6. Average Delivery Time For Online Purchases
 ```DAX
@@ -188,11 +195,14 @@ VAR DeliveryDays =
 RETURN
     DeliveryDays
 ```
-![Screenshot (59)](https://github.com/user-attachments/assets/fc5c1712-e65f-4499-b752-7f3e8425bf27)
-##### Analysis: Gradually reduction in delivery days each year, showing improvments in shipping methods and reduction in customer waiting time
+![Screenshot (59)](https://github.com/user-attachments/assets/1df97b35-3ad8-4f1f-8a14-e077a07ae662)
+
+***Analysis:** Gradually reduction in delivery days each year, showing improvments in shipping methods and reduction in customer waiting time*
+
 - 5. Average Customer Spend
 ```DAX
-DIVIDE([Revenue], [Customers], 0)
+Average Customer Spend = 
+    DIVIDE([Revenue], [Customers], 0)
 ```
 
 - 7. Total Product Delivered (N) Days
@@ -212,10 +222,10 @@ CALCULATE(
 - 8. Customer Conversion Rate
 ```DAX
 Conversion Rate % = 
-VAR TotalCustomers = DISTINCTCOUNT(Customers[CustomerKey])
-VAR ConvertedCustomers = DISTINCTCOUNT(Sales[CustomerKey])
-
-RETURN DIVIDE(ConvertedCustomers, TotalCustomers, 0)
+    VAR TotalCustomers = DISTINCTCOUNT(Customers[CustomerKey])
+    VAR ConvertedCustomers = DISTINCTCOUNT(Sales[CustomerKey])
+    
+    RETURN DIVIDE(ConvertedCustomers, TotalCustomers, 0)
 ```
 ---
 ## 🏆 Dashboard Visuals
@@ -226,39 +236,42 @@ To ensure actionable insights, the following key visuals are included in the Pow
 4. **Sales Trends Over Time** - Unveils seasonal trends and purchasing behavior.
 
 ## Key Visuals
-- ### Top Countries by Revenue
+- #### Top Countries by Revenue
 ![Screenshot (63)](https://github.com/user-attachments/assets/32c12dc1-3add-4a38-8eca-88b1cc153245)
 
 - ### Revenue Share by Purchase Channel
-![Screenshot (64)](https://github.com/user-attachments/assets/d6fe266b-f1fa-4973-981c-235529d8a655)
+![Screenshot (64)](https://github.com/user-attachments/assets/b8331255-1be7-49bf-a638-8a747ca88ab9)
 
 - ### Highest Performing Product Categories
-![Screenshot (62)](https://github.com/user-attachments/assets/68ae9fe3-4677-4e17-8c70-98264ee099bc)
+![Screenshot (77)](https://github.com/user-attachments/assets/f6399f01-7a38-40f0-94f3-6a4ec79b335f)
 
 - ### Revenue Across Each Month
 ![Screenshot (65)](https://github.com/user-attachments/assets/8652aa39-2b0c-4b48-8649-803634b46032)
 
+- #### Revenue (%) Share
+![Screenshot (76)](https://github.com/user-attachments/assets/311e462a-c1cb-4ef0-b9e8-2b23b1aa6ca1)
+
 ---
-### 1. Full Dashboard Overview:
-- **Overall Dashboard showing key KPIs and Overall sales perfomance.**
+### Overall Dashboard showing key KPIs and Overall sales perfomance.
 ![Screenshot (40)](https://github.com/user-attachments/assets/40fdfbd9-7aec-477e-a963-1ebd52e6bd40)
 
-- **Overall Dashboard showing the Filter Pane and Active Filter on Dashboard**
+#### Dashboard showing the Filter Pane and Active Filter on Dashboard
 ![Screenshot (41)](https://github.com/user-attachments/assets/a7d17023-3a68-4226-8bd7-ee291f289231)
 
 ### 2. Product Sales Insights:
-- **Dashboard showing Product sales performance for In-store purchases.**
+#### Dashboard showing Product sales performance for In-store purchases.
 ![Screenshot (42)](https://github.com/user-attachments/assets/d917da04-6765-4058-ab66-5dcffaade328)
 
-- **Dashboard showing Product sales performance for Online purchases also with the average delivery days.**
+#### Dashboard showing Product sales performance for Online purchases also with the average delivery days.
 ![Screenshot (43)](https://github.com/user-attachments/assets/f6a15f05-d6a0-4b74-8c9d-9ede8534db99)
 
 ### 3. Category Performance Insights:
-- **Dashboard showing revenue by each Category, changes in sales performance, changes in different states performance**
+#### Dashboard showing revenue by each Category, changes in sales performance, changes in different states performance
 ![Screenshot (45)](https://github.com/user-attachments/assets/d3aca86f-dcac-4a44-b9da-b32b56be5fc8)
 
-### 4. Category Performance Insights:
+### 4. Customers Details Overview:
 ![Screenshot (46)](https://github.com/user-attachments/assets/8b1fe3dd-51f3-4a88-8c44-5783a99f824e)
+
 ---
 
 ## 📈 Key Insights
