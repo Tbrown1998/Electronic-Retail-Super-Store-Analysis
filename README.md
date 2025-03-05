@@ -255,15 +255,9 @@ To ensure actionable insights, the following key visuals are included in the Pow
 ### Overall Dashboard showing key KPIs and Overall sales perfomance.
 ![Screenshot (40)](https://github.com/user-attachments/assets/40fdfbd9-7aec-477e-a963-1ebd52e6bd40)
 
-#### Dashboard showing the Filter Pane and Active Filter on Dashboard
-![Screenshot (41)](https://github.com/user-attachments/assets/a7d17023-3a68-4226-8bd7-ee291f289231)
-
 ### 2. Product Sales Insights:
 #### Dashboard showing Product sales performance for In-store purchases.
 ![Screenshot (42)](https://github.com/user-attachments/assets/d917da04-6765-4058-ab66-5dcffaade328)
-
-#### Dashboard showing Product sales performance for Online purchases also with the average delivery days.
-![Screenshot (43)](https://github.com/user-attachments/assets/f6a15f05-d6a0-4b74-8c9d-9ede8534db99)
 
 ### 3. Category Performance Insights:
 #### Dashboard showing revenue by each Category, changes in sales performance, changes in different states performance
@@ -271,6 +265,9 @@ To ensure actionable insights, the following key visuals are included in the Pow
 
 ### 4. Customers Details Overview:
 ![Screenshot (46)](https://github.com/user-attachments/assets/8b1fe3dd-51f3-4a88-8c44-5783a99f824e)
+
+## 🔗 Power BI Dashboard Link
+[View the Interactive Retail Sales Dashboard to view Key Visuals](https://app.powerbi.com/reportEmbed?reportId=ae2e2030-6ab3-427c-8e0a-cde0dac20946&autoAuth=true&ctid=3af45fec-8c0e-49be-8467-608b1fd05a35)
 
 ---
 
@@ -280,14 +277,8 @@ To ensure actionable insights, the following key visuals are included in the Pow
 - **Online sales contributed 20% of the total revenue**, showing consistent growth.
 - **Sales always decrease by about 35% around March - April and Gradually pickups around May**, largely due to holiday shopping trends.
 - **Desktops** were the best-selling product categories across all regions.
-
-## 🚀 How to Use This Project
-1. **Clone the repository** using the following command:
-```bash
-git clone https://github.com/OluwatosinAmosu/Electronics-Retail-Dashboard.git
-```
-2. Open the **Electronics_Sales.pbix** file in **Power BI**.
-3. Explore the interactive visuals to uncover insights.
+  
+---
 
 ## 🔗 Related Projects
 If you found this project interesting, check out these related analytics projects:
