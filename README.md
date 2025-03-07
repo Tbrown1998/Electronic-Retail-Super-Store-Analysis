@@ -24,19 +24,10 @@ This project aims to analyze and optimize the retail sales performance of an ele
 
 1. **Data Cleaning & Transformation** – Ensure data integrity by handling missing values, duplicates, and inconsistencies across multiple tables.  
 2. **Exploratory Data Analysis (EDA)** – Identify key sales trends, product performance, and customer purchasing behavior through statistical and visual analysis.  
-3. **SQL-Based Business Insights** – Utilize SQL queries to answer critical business questions, such as top-selling products, revenue trends by region, and store performance comparisons.  
-4. **Data Modeling & Relationship Mapping** – Establish connections between product categories, sales transactions, warranty claims, and store locations for better analysis.  
-5. **Dashboard & Data Visualization** – Create an interactive Power BI dashboard to present insights in a clear and actionable manner, aiding strategic decision-making.
+3. **Data Modeling & Relationship Mapping** – Establish connections between product categories, sales transactions, warranty claims, and store locations for better analysis.  
+4. **Dashboard & Data Visualization** – Create an interactive Power BI dashboard to present insights in a clear and actionable manner, aiding strategic decision-making.
 
 ---
-
-## Project Goals
-The primary goals of this project include:
-- **Identifying top revenue-generating products** across all sales channels.
-- **Analyzing store-wise and country-wise sales performance** to determine profitable locations.
-- **Comparing online vs. offline sales trends** to optimize inventory distribution.
-- **Recognizing seasonal sales trends** and peak shopping periods.
-- **Evaluating product categories contributing most to total revenue**.
 
 ### **Expected Outcomes**  
 By analyzing sales patterns and customer behaviors, this project aims to identify the most promising locations for expansion, helping Monday Coffee **maximize revenue, optimize store placement, and enhance customer experience.** 
@@ -106,18 +97,8 @@ Click Close & Apply to load the cleaned dataset into Power BI for visualization.
 ---
 ## Project Data Modelling
 The goal was to build a **star schema** to enhance query performance and enable meaningful analysis.
-#### Step 1: Creating Date Table For Time Data Analysis
-```DAX
-Date = 
-VAR StartDate = DATE(2016, 1, 1)  -- Change to your preferred start date
-VAR EndDate = TODAY()  -- Uses today's date as the end date
-RETURN CALENDAR(StartDate, EndDate)
-```
-- Extract neccessary columns from `Date` column
-![Screenshot (52)](https://github.com/user-attachments/assets/26330727-0417-4a67-85ed-024446e11b65)
-- *Image Showing Completed Date Table*
 
-### Step 2: Defining Relationships
+### Defining Relationships
 #### **Primary & Foreign Keys**
 To establish relationships:
 - **Sales Table** → Linked to `Products Table` using `ProductKey`.
@@ -235,22 +216,6 @@ To ensure actionable insights, the following key visuals are included in the Pow
 3. **Online vs. Offline Sales Performance** - Compares digital and physical sales trends.
 4. **Sales Trends Over Time** - Unveils seasonal trends and purchasing behavior.
 
-## Key Visuals
-- #### Top Countries by Revenue
-![Screenshot (63)](https://github.com/user-attachments/assets/32c12dc1-3add-4a38-8eca-88b1cc153245)
-
-- ### Revenue Share by Purchase Channel
-![Screenshot (64)](https://github.com/user-attachments/assets/b8331255-1be7-49bf-a638-8a747ca88ab9)
-
-- ### Highest Performing Product Categories
-![Screenshot (77)](https://github.com/user-attachments/assets/f6399f01-7a38-40f0-94f3-6a4ec79b335f)
-
-- ### Revenue Across Each Month
-![Screenshot (65)](https://github.com/user-attachments/assets/8652aa39-2b0c-4b48-8649-803634b46032)
-
-- #### Revenue (%) Share
-![Screenshot (76)](https://github.com/user-attachments/assets/311e462a-c1cb-4ef0-b9e8-2b23b1aa6ca1)
-
 ---
 ### Overall Dashboard showing key KPIs and Overall sales perfomance.
 ![Screenshot (40)](https://github.com/user-attachments/assets/40fdfbd9-7aec-477e-a963-1ebd52e6bd40)
@@ -267,7 +232,7 @@ To ensure actionable insights, the following key visuals are included in the Pow
 ![Screenshot (46)](https://github.com/user-attachments/assets/8b1fe3dd-51f3-4a88-8c44-5783a99f824e)
 
 ## 🔗 Power BI Dashboard Link
-[View the Interactive Retail Sales Dashboard to view Key Visuals](https://app.powerbi.com/reportEmbed?reportId=ae2e2030-6ab3-427c-8e0a-cde0dac20946&autoAuth=true&ctid=3af45fec-8c0e-49be-8467-608b1fd05a35)
+Clink The Link to [View the Interactive Retail Sales Dashboard to view Key Visuals](https://app.powerbi.com/reportEmbed?reportId=ae2e2030-6ab3-427c-8e0a-cde0dac20946&autoAuth=true&ctid=3af45fec-8c0e-49be-8467-608b1fd05a35)
 
 ---
 
@@ -277,13 +242,6 @@ To ensure actionable insights, the following key visuals are included in the Pow
 - **Online sales contributed 20% of the total revenue**, showing consistent growth.
 - **Sales always decrease by about 35% around March - April and Gradually pickups around May**, largely due to holiday shopping trends.
 - **Desktops** were the best-selling product categories across all regions.
-  
----
-
-## 🔗 Related Projects
-If you found this project interesting, check out these related analytics projects:
-- [E-commerce Sales Analysis](#)
-- [Retail Customer Segmentation](#)
 
 ---
 
@@ -293,6 +251,11 @@ Hi, I'm Oluwatosin Amosu Bolaji, a Data Analyst skilled in SQL, Power BI, and Ex
 - **🔹 Key Skills:** Data Analysis | SQL Queries | Power BI Dashboards | Data Cleaning | Reporting
 - **🔹 Passionate About:** Data storytelling, problem-solving, and continuous learning
 
-- **📫 Let's connect!**
-- 🔗 [Linkedin](www.linkedin.com/in/oluwatosin-amosu-722b88141) | 🌐 [Portfolio](https://github.com/Tbrown1998?tab=repositories) | 📩 oluwabolaji60@gmail.com
+#### 🚀 **Always learning and improving—driven by curiosity and a passion for analytics.**  
 
+### 📫 **Let’s connect!**  
+- 📩 oluwabolaji60@gmail.com
+- 🔗 : [LinkedIn](https://www.linkedin.com/in/oluwatosin-amosu-722b88141)
+- 🌐 : [My Portfolio](https://www.datascienceportfol.io/oluwabolaji60) 
+- 𝕏 : [Twitter/X](https://x.com/thee_oluwatosin?s=21&t=EqoeQVdQd038wlSUzAtQzw)
+- 🔗 : [Medium](https://medium.com/@oluwabolaji60)
