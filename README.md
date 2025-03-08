@@ -20,17 +20,16 @@ By analyzing this retail sales dataset, the project aims to uncover meaningful i
 By leveraging **Power BI and Excel**, this analysis helps stakeholders understand key revenue drivers and optimize business strategies.
 
 ## Project Objective 🎯
-This project aims to analyze and optimize the retail sales performance of an electronics superstore by leveraging data analytics. The dataset consists of transactional sales data from multiple store locations and an online platform. The primary objectives of this analysis are:  
-
-1. **Data Cleaning & Transformation** – Ensure data integrity by handling missing values, duplicates, and inconsistencies across multiple tables.  
-2. **Exploratory Data Analysis (EDA)** – Identify key sales trends, product performance, and customer purchasing behavior through statistical and visual analysis.  
-3. **Data Modeling & Relationship Mapping** – Establish connections between product categories, sales transactions, warranty claims, and store locations for better analysis.  
-4. **Dashboard & Data Visualization** – Create an interactive Power BI dashboard to present insights in a clear and actionable manner, aiding strategic decision-making.
-
+The primary goals of this project include:
+- **Identifying top revenue-generating products** across all sales channels.
+- **Analyzing store-wise and country-wise sales performance** to determine profitable locations.
+- **Comparing online vs. offline sales trends** to optimize inventory distribution.
+- **Recognizing seasonal sales trends** and peak shopping periods.
+- **Evaluating product categories contributing most to total revenue**.
 ---
 
 ### **Expected Outcomes**  
-By analyzing sales patterns and customer behaviors, this project aims to identify the most promising locations for expansion, helping Monday Coffee **maximize revenue, optimize store placement, and enhance customer experience.** 
+The expected outcome of this Project is to develop a well-structured retail sales database, generate insightful business intelligence through Power BI visualizations, and uncover key sales performance metrics—such as top-performing countries, best-selling products, revenue trends.
 
 ---
 
@@ -54,13 +53,14 @@ The dataset was sourced from **[Maven Analytics](https://mavenanalytics.io/data-
 | **Products** | Information about products and their attributes |
 | **Category** | Hierarchical classification of product types    |
 | **Date** | Calendar date for time data analysis        |
+
 ---
 ## Project Structure
 
 ## 1. Data Preparation (Microsoft Excel): 
 - Data understanding, exploration, data loading, data importing.
 - Check dataset structure using Column Headers & Data Types
-- Standardizing Data Formats
+- Import the csv. Data from Excel Into Powerbi’s Power Query Editor
 
 ##  2. **Data Cleaning & Transformation in Power BI (Power Query)**  
 
@@ -79,15 +79,13 @@ Data cleaning is a crucial step before analysis, ensuring accuracy, consistency,
 - Convert categorical fields (e.g., `Product Name`) to **Text** format.  
 - Convert date fields (`Transaction Date`) to **Date** format.  
   - **Home** → **Data Type** → Select **Date**  
-- Standardize text formatting:  
-  - Convert to **Proper Case** (e.g., "laptop" → "Laptop") using:  
-    ```powerquery
-    Text.Proper([Product Name])
-    ```
+- Standardize text formatting: Convert to **Proper Case** (e.g., "laptop" → "Laptop") using:  
+
   ![Screenshot (50)](https://github.com/user-attachments/assets/5551047f-e697-483d-9044-d9510c545d3a)
   - *Image Showing Format Standardizing Process*
+  
 #### **Step 3: Handling Missing Values**  
-##### **A. Identifying Missing Data**  
+- Identifying Missing Data 
 - Click on each column and check for **null** values in the data preview.  
 - Use **Filter** to check missing entries. 
 
@@ -95,7 +93,7 @@ Data cleaning is a crucial step before analysis, ensuring accuracy, consistency,
 Click Close & Apply to load the cleaned dataset into Power BI for visualization.
 
 ---
-## Project Data Modelling
+## Data Modelling
 The goal was to build a **star schema** to enhance query performance and enable meaningful analysis.
 
 ### Defining Relationships
@@ -121,19 +119,11 @@ Total Revenue =
 Revenue Percentage Share =
     DIVIDE([Revenue], CALCULATE([Revenue], ALL(stores[Country])), 0)
 ```
-![Screenshot (54)](https://github.com/user-attachments/assets/8d23e4d0-a323-452c-b7e6-1a51b2c316e6)
-
-***Analysis:** `USA` is the **top-performing country** in terms of revenue with `43%` of Total Revenue.  `Online sales` contributed 20% of the total revenue, showing consistent growth.*
-
 - 3. Orders Count
 ```DAX
 Orders = 
     SUM(Sales[Quantity])
 ```
-![Screenshot (58)](https://github.com/user-attachments/assets/71ee9dfe-7614-4973-bd23-387b9f432fcf)
-
-***Analysis:** Heatmap Visual shows Sales always decrease by about 35% around March - April and Gradually pickups around May**, showing shopping trends, and Peaks by December - February.*
-
 - 4. Top product Sales In Each Country
 ```DAX 
 Top Country (Product) = 
@@ -158,9 +148,6 @@ Revenue Growth % =
     Gross Profit Margin % = 
     DIVIDE([Gross Profit], [Revenue], 0)
 ```
-![Screenshot (55)](https://github.com/user-attachments/assets/817a821f-7b48-412e-989f-95d9a7e00d69)
-
-***Analysis:** `2019` had the best revenue growth and there's been a continious decline in sales and revenue generated.*
 
 - 6. Average Delivery Time For Online Purchases
 ```DAX
@@ -176,10 +163,6 @@ VAR DeliveryDays =
 RETURN
     DeliveryDays
 ```
-![Screenshot (59)](https://github.com/user-attachments/assets/1df97b35-3ad8-4f1f-8a14-e077a07ae662)
-
-***Analysis:** Gradually reduction in delivery days each year, showing improvments in shipping methods and reduction in customer waiting time*
-
 - 5. Average Customer Spend
 ```DAX
 Average Customer Spend = 
@@ -208,7 +191,32 @@ Conversion Rate % =
     
     RETURN DIVIDE(ConvertedCustomers, TotalCustomers, 0)
 ```
+
 ---
+
+### 🧮 Key Analysis Visuals
+- Revenue Percentage Share
+![Screenshot (54)](https://github.com/user-attachments/assets/8d23e4d0-a323-452c-b7e6-1a51b2c316e6)
+
+***Analysis:** `USA` is the **top-performing country** in terms of revenue with `43%` of Total Revenue.  `Online sales` contributed 20% of the total revenue, showing consistent growth.*
+
+- Sales Pattern
+![Screenshot (58)](https://github.com/user-attachments/assets/71ee9dfe-7614-4973-bd23-387b9f432fcf)
+
+***Analysis:** Heatmap Visual shows Sales always decrease by about 35% around March - April and Gradually pickups around May**, showing shopping trends, and Peaks by December - February.*
+
+- Revenue % Growth
+![Screenshot (55)](https://github.com/user-attachments/assets/817a821f-7b48-412e-989f-95d9a7e00d69)
+
+***Analysis:** `2019` had the best revenue growth and there's been a continious decline in sales and revenue generated.*
+
+- Average Delivery Time For Online Purchases
+![Screenshot (59)](https://github.com/user-attachments/assets/1df97b35-3ad8-4f1f-8a14-e077a07ae662)
+
+***Analysis:** Gradually reduction in delivery days each year, showing improvments in shipping methods and reduction in customer waiting time*
+
+---
+
 ## 🏆 Dashboard Visuals
 To ensure actionable insights, the following key visuals are included in the Power BI dashboard:
 1. **Revenue Breakdown by Product & Category** - Identifies top-performing products.
