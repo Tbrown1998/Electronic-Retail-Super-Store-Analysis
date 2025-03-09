@@ -1,4 +1,4 @@
-# 📊 Electronics Retail Superstore Power BI Dashboard
+# 📊 Unveiling Retail Insights: Analyzing 60,000+ Sales Records of an Electronics Superstore
 
 ![Screenshot (40)](https://github.com/user-attachments/assets/40fdfbd9-7aec-477e-a963-1ebd52e6bd40)
 
