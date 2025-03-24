@@ -240,6 +240,8 @@ To ensure actionable insights, the following key visuals are included in the Pow
 ![Screenshot (46)](https://github.com/user-attachments/assets/8b1fe3dd-51f3-4a88-8c44-5783a99f824e)
 
 ## 🔗 Power BI Dashboard Link
+![Electronic Report Image](https://github.com/user-attachments/assets/e6ea5e61-e8ff-414c-9a13-29b3cb3ac118)
+
 Clink The Link to [View the Interactive Retail Sales Dashboard to view Key Visuals](https://app.powerbi.com/reportEmbed?reportId=ae2e2030-6ab3-427c-8e0a-cde0dac20946&autoAuth=true&ctid=3af45fec-8c0e-49be-8467-608b1fd05a35)
 
 ---
