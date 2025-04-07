@@ -256,12 +256,12 @@ Clink The Link to [View the Interactive Retail Sales Dashboard to view Key Visua
 ---
 
 ## 📌 About Me
-Hi, I'm Oluwatosin Amosu Bolaji, a Data Analyst skilled in SQL, Power BI, and Excel. I enjoy turning complex datasets into actionable insights through data visualization and business intelligence techniques.
+Hi, I'm Oluwatosin Amosu Bolaji, a Data Analyst with strong skills in Python, SQL, Power BI, and Excel. I turn raw data into actionable insights through automation, data storytelling, and visual analytics.
 
-- **🔹 Key Skills:** Data Analysis | SQL Queries | Power BI Dashboards | Data Cleaning | Reporting
-- **🔹 Passionate About:** Data storytelling, problem-solving, and continuous learning
+- **💡 Tools & Tech:** **Python** (Pandas, NumPy, Matplotlib, Seaborn) | **SQL** (MsSQL, Postgree, MySQL) | **Microsoft Power BI** | **Microsoft Excel**
+- **🔹 Key Skills:** Data wrangling, dashboarding, reporting, and process optimization.
 
-#### 🚀 **Always learning and improving—driven by curiosity and a passion for analytics.**  
+#### 🚀 **Always learning. Always building. Data-driven to the core.**  
 
 ### 📫 **Let’s connect!**  
 - 📩 oluwabolaji60@gmail.com
