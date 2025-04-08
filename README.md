@@ -194,6 +194,12 @@ Conversion Rate % =
     
     RETURN DIVIDE(ConvertedCustomers, TotalCustomers, 0)
 ```
+---
+
+![Screenshot (131)](https://github.com/user-attachments/assets/77e57c3f-fff0-413a-8591-a6153b8d86eb)
+
+![Screenshot (132)](https://github.com/user-attachments/assets/3a861475-e309-44f9-b622-424d3a7b943a)
+
 
 ---
 
