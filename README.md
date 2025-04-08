@@ -8,7 +8,7 @@ This project focuses on analyzing sales data from an **Electronics Retail Supers
 - ![Retail Analytics](https://img.shields.io/badge/domain-retail%20analytics-blue) 
 
 ---
-## Business Problem 🚩
+## Business Problem 🚩 
 The electronics superstore operates across multiple locations and an online store, generating vast amounts of transactional data. However, several challenges impact business efficiency and profitability:  
 
 - **Revenue Optimization:** The company lacks clear visibility into which products and locations contribute the most to revenue, making it difficult to allocate resources effectively.  
