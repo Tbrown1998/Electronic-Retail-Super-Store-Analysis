@@ -42,7 +42,6 @@ The expected outcome of this Project is to develop a well-structured retail sale
 ---
 
 ### **Data Source**  
-The dataset was sourced from **[Maven Analytics](https://mavenanalytics.io/data-playground?order=date_added%2Cdesc&search=electronic)** and including tables containing information about transactions, products, customers, stores.
 - **Sales Transactions** – Records of all coffee sales.  
 - **Stores** – Information on existing sales locations.  
 - **Customers** – Demographic and behavioral data of consumers.  
